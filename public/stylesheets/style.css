@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  background-color: #ad1d28;
+  background-color: #32CD32;
   border-color: #911821;
 }
 
@@ -77,4 +77,7 @@ h4 small {
 
 legend {
   font-family: 'Lobster', cursive;
+}
+.site-name{
+margin-top: 100px;
 }
