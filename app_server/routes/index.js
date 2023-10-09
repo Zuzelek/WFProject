@@ -7,12 +7,11 @@ const ctrlOthers = require('../controllers/others');
 router.get('/', ctrlLocations.homelist);
 router.get('/location', ctrlLocations.locationInfo);
 router.get('/location/review/new', ctrlLocations.addReview);
-router.get('/location/musicData', ctrlLocations.musicData);
+router.get('/musicData', ctrlLocations.musicData);
 
 
 /* Other pages */
 router.get('/login', ctrlOthers.about);
-
 module.exports = router;
 
 

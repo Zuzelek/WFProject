@@ -1,5 +1,55 @@
 extends layout
 
 block content
-  h1= title
-  p Alan's project
+  doctype html
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title DataTables Example
+      link(rel="stylesheet", href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css")
+      link(rel="stylesheet", href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css")
+      link(rel="stylesheet", href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css")
+      link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css")
+      style.
+        table#example {
+          margin-top: 200px; /* Add your desired margin-top value here */
+        }
+      script(src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    body
+      table#example.table.table-striped.table-bordered.nowrap(style="width:100%")
+        thead
+          tr
+            th On the chart
+            th Song Name
+            th Author
+            th Release Year
+            th Length
+        tbody
+          tr
+            td 1
+            td Justin Bieber
+            td Baby
+            td 2011
+            td 3:25
+          // Add more rows here...
+          tr
+            td 2
+            td Justin Bieber
+            td Baby
+            td 2011
+            td 3:25
+          // Add more rows here...
+          tr
+            td songOne.chart
+            td songOne.songName
+            td songOne.author
+            td songOne.releaseYear
+            td songOne.length
+          // Add more rows here...
+        tfoot
+      script(type="text/javascript", src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js")
+      script(type="text/javascript", src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js")
+      script(type="text/javascript", src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js")
+      script(type="text/javascript", src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js")

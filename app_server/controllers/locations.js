@@ -1,7 +1,21 @@
 /* GET 'home' page */
-const homelist = function(req, res) {
-  res.render('locations-list', { title: 'Home' });
+const homelist = function(req, res){
+  res.render('locations-list', {
+    title: 'Musicaly - Find top songs now!',
+    pageHeader: { 
+      title: 'Musicaly', 
+      strapline: 'Find the best tunes on the internet!' 
+    },
+    songOne: { 
+      chart: '1',
+      songName: 'Baby',
+      author: 'Justin Bieber',
+      releaseYear: '2011',
+      length: '3:27'
+    }
+  });
 };
+
 
 /* GET 'Location info' page */
 const locationInfo = function(req, res) {
@@ -22,5 +36,5 @@ module.exports = {
   homelist,
   locationInfo,
   addReview,
-  musicData  // Make sure to include this in the exported object
+  musicData  
 };
