@@ -4,14 +4,12 @@ const ctrlLocations = require('../controllers/locations');
 const ctrlOthers = require('../controllers/others');
 
 /* Locations pages */
-router.get('/', ctrlLocations.homelist);
-router.get('/location', ctrlLocations.locationInfo);
-router.get('/location/review/new', ctrlLocations.addReview);
-router.get('/musicData', ctrlLocations.musicData);
+router.get('/', ctrlLocations.register);
+router.get('/musicData/', ctrlLocations.musicData);
 
 
 /* Other pages */
-router.get('/login', ctrlOthers.about);
+router.get('/login', ctrlOthers.login);
 module.exports = router;
 
 

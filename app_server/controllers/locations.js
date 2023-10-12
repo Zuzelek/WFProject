@@ -1,7 +1,12 @@
-/* GET 'home' page */
-const homelist = function(req, res){
-  res.render('locations-list', {
-    title: 'Musicaly - Find top songs now!',
+/* GET 'Register Page' page */
+const register = function(req, res){
+  res.render('register-page', );
+};
+
+/* GET 'Music Data' page */
+const musicData = function(req, res) {
+  res.render('musicData', {
+    title: 'Music Data',
     pageHeader: { 
       title: 'Musicaly', 
       strapline: 'Find the best tunes on the internet!' 
@@ -16,25 +21,7 @@ const homelist = function(req, res){
   });
 };
 
-
-/* GET 'Location info' page */
-const locationInfo = function(req, res) {
-  res.render('index', { title: 'Location info' });
-};
-
-/* GET 'Add review' page */
-const addReview = function(req, res) {
-  res.render('index', { title: 'Add review' });
-};
-
-/* GET 'Music Data' page */
-const musicData = function(req, res) {
-  res.render('musicData', { title: 'Music Data' });
-};
-
 module.exports = {
-  homelist,
-  locationInfo,
-  addReview,
+  register,
   musicData  
 };
