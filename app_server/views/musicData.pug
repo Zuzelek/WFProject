@@ -7,50 +7,66 @@ block content
       meta(charset="UTF-8")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
       title DataTables Example
-      link(rel="stylesheet", href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css")
-      link(rel="stylesheet", href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css")
-      link(rel="stylesheet", href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css")
-      link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css")
       style.
-        table#example {
-          margin-top: 200px; /* Add your desired margin-top value here */
-        }
-      script(src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js")
-      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        table#example
+          margin-top: 400px;
+        // Add your custom CSS here
+        body
+          font-family: "Cabin, Arial, sans-serif"
+          color: #ffffff
+          background-color: #808080
+        h1, h2, h3, h4, h5, h6
+          font-family: 'Lobster', cursive
+        .navbar
+          background-color: #32CD32
+          border-color: #911821
+        .navbar-brand
+          font-family: 'Lobster', cursive
+        .banner
+          margin-top: 4em
+          border-bottom: 1px solid #469ea8
+          margin-bottom: 1.5em
+          padding-bottom: 0.5em
     body
-      table#example.table.table-striped.table-bordered.nowrap(style="width:100%")
+      table#example.table.table-striped.table-bordered.nowrap(style="width:100%; margin-top: 300px;")
+
         thead
           tr
             th On the chart
-            th Song Name
-            th Author
+            th Title
+            th Genre
+            th Artist
             th Release Year
-            th Length
+            th Time
         tbody
-          tr
-            td 1
-            td Justin Bieber
-            td Baby
-            td 2011
-            td 3:25
-          //- Add more rows here...
-          tr
-            td 2
-            td Justin Bieber
-            td Baby
-            td 2011
-            td 3:25
-          //- Add more rows here...
-          tr
+          each song in songOne
             tr
-              td hi
-              td ${ctrlLocations.homelist.songOne.songName}
-              td songOne.author
-              td songOne.releaseYear
-              td songOne.length
-          //- Add more rows here...
+              td= song.chart
+              td= song.songName
+              td= song.genre
+              td= song.artist
+              td= song.releaseYear
+              td= song.length
         tfoot
-      script(type="text/javascript", src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js")
-      script(type="text/javascript", src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js")
-      script(type="text/javascript", src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js")
-      script(type="text/javascript", src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js")
+      // Provided HTML added at the bottom
+      .how-section1
+        .row
+          .col-md-6.how-img
+
+    .row
+      .col-md-6
+        h4 Top songs
+        p.text-muted
+          | All your songs in one place
+          | Our mission is to bring all your favorite songs together in one place, making it easier than ever to enjoy your unique soundtracks.
+          | Your songs, your way.
+      .col-md-6.how-img
+        img.rounded-circle.img-fluid(src='https://t3.ftcdn.net/jpg/04/54/66/12/360_F_454661277_NtQYM8oJq2wOzY1X9Y81FlFa06DVipVD.jpg', alt='' height='75' width='75')
+    .row
+      .col-md-6.how-img
+        img.rounded-circle.img-fluid(src='https://img.myloview.com/stickers/glowing-neon-line-magnifying-glass-icon-isolated-on-black-background-search-focus-zoom-business-symbol-colorful-outline-concept-vector-700-259495746.jpg', alt='' height='100' width='100')
+      .col-md-6
+        h4 Find songs.
+        p.text-muted
+          | Feeling lost when it comes to choosing the perfect music for your mood?
+          | Let's help you discover some great songs right now!
