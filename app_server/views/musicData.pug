@@ -39,7 +39,7 @@ block content
             th Release Year
             th Time
         tbody
-          each song in songOne
+          each song in songs
             tr
               td= song.chart
               td= song.songName
@@ -48,7 +48,6 @@ block content
               td= song.releaseYear
               td= song.length
         tfoot
-      // Provided HTML added at the bottom
       .how-section1
         .row
           .col-md-6.how-img
