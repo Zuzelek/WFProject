@@ -11,9 +11,9 @@ block content
         .fadeIn.first
           img#icon(src='http://danielzawadzki.com/codepen/01/icon.svg', alt='User Icon')
         // Login Form
-        form
+        form(role='form', action="/login/", method="post", style='max-width: 300px;')
           label(for='login') Login
-          input#login.fadeIn.second(type='text', name='login', placeholder='login')
+          input#login.fadeIn.second(type='text', name='username', placeholder='login')
 
           label(for='password') Password
           input#password.fadeIn.third(type='password', name='password', placeholder='password')
@@ -23,5 +23,3 @@ block content
         // Remind Password
         #formFooter
           a.underlineHover(href='#') Forgot Password?
-
-    

@@ -2,7 +2,7 @@
 @import url('https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css');
 @import url('https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css');
 @import url('https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css');
-	
+
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #ffffff;
@@ -12,7 +12,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
 }
-
+.content{
+	margin-top:10rem;
+}
 .navbar {
   background-color: #32CD32;
   border-color: #911821;
@@ -89,7 +91,7 @@ margin-top: 100px;
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   min-height: 100%;
@@ -331,7 +333,7 @@ input[type=text]:placeholder {
 
 *:focus {
     outline: none;
-} 
+}
 
 #icon {
   width:60%;
@@ -549,7 +551,7 @@ input[type=text]:placeholder {
 {
     margin-top: 10%;
 }
-.how-img 
+.how-img
 {
     text-align: center;
 }

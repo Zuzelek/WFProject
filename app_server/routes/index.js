@@ -3,7 +3,7 @@ const router = express.Router();
 const ctrlLocations = require('../controllers/locations');
 const ctrlOthers = require('../controllers/others');
 
-router.get('/', ctrlLocations.register);
+router.get('/register/', ctrlLocations.register);
 router.get('/musicData/', ctrlLocations.musicData);
 
 /* Other pages */

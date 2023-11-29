@@ -12,7 +12,7 @@ const register = function (req, res) {
 };
 
 const _renderHomepage = function (req, res, responseBody) {
-  console.log(responseBody); 
+  console.log(responseBody);
   res.render('musicData', {
     title: 'Music Data - All your music in one place',
     pageHeader: {
@@ -26,16 +26,13 @@ const _renderHomepage = function (req, res, responseBody) {
 
 
 const musicData = function (req, res) {
-  const path = '/api/locations';
+  const path = '/api/locations';  // Adjust the path based on your API
+
   const requestOptions = {
     url: apiOptions.server + path,
     method: 'GET',
     json: {},
-    qs: {
-      lng: -0.9690884,
-      lat: 51.455041,
-      maxDistance: 20
-    }
+    qs: {}
   };
 
   request(requestOptions, (err, response, body) => {
@@ -45,12 +42,15 @@ const musicData = function (req, res) {
     res.render('error', { error: 'Failed to fetch music data' });
     return;
   }
+  console.log(response.statusCode);  // Log the response status
+  console.log(body);  // Log the response body
   _renderHomepage(req, res, body);
 });
+
 
 };
 
 module.exports = {
   register,
-  musicData  // Keeping the naming the same as "musicData"
+  musicData
 };
