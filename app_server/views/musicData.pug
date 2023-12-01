@@ -1,0 +1,71 @@
+extends layout
+
+block content
+  doctype html
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title DataTables Example
+      style.
+        table#example
+          margin-top: 400px;
+        // Add your custom CSS here
+        body
+          font-family: "Cabin, Arial, sans-serif"
+          color: #ffffff
+          background-color: #808080
+        h1, h2, h3, h4, h5, h6
+          font-family: 'Lobster', cursive
+        .navbar
+          background-color: #32CD32
+          border-color: #911821
+        .navbar-brand
+          font-family: 'Lobster', cursive
+        .banner
+          margin-top: 4em
+          border-bottom: 1px solid #469ea8
+          margin-bottom: 1.5em
+          padding-bottom: 0.5em
+    body
+      table#example.table.table-striped.table-bordered.nowrap(style="width:100%; margin-top: 300px;")
+
+        thead
+          tr
+            th On the chart
+            th Title
+            th Genre
+            th Artist
+            th Release Year
+            th Time
+        tbody
+          each song in songs
+            tr
+              td= song.chart
+              td= song.songName
+              td= song.genre
+              td= song.artist
+              td= song.releaseYear
+              td= song.length
+        tfoot
+      .how-section1
+        .row
+          .col-md-6.how-img
+
+    .row
+      .col-md-6
+        h4 Top songs
+        p.text-muted
+          | All your songs in one place
+          | Our mission is to bring all your favorite songs together in one place, making it easier than ever to enjoy your unique soundtracks.
+          | Your songs, your way.
+      .col-md-6.how-img
+        img.rounded-circle.img-fluid(src='https://t3.ftcdn.net/jpg/04/54/66/12/360_F_454661277_NtQYM8oJq2wOzY1X9Y81FlFa06DVipVD.jpg', alt='' height='75' width='75')
+    .row
+      .col-md-6.how-img
+        img.rounded-circle.img-fluid(src='https://img.myloview.com/stickers/glowing-neon-line-magnifying-glass-icon-isolated-on-black-background-search-focus-zoom-business-symbol-colorful-outline-concept-vector-700-259495746.jpg', alt='' height='100' width='100')
+      .col-md-6
+        h4 Find songs.
+        p.text-muted
+          | Feeling lost when it comes to choosing the perfect music for your mood?
+          | Let's help you discover some great songs right now!

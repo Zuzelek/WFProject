@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  div(style='margin-top: 300px;')
+
+    .wrapper.fadeInDown
+      #formContent
+        // Tabs Titles
+        // Icon
+        .fadeIn.first
+          img#icon(src='http://danielzawadzki.com/codepen/01/icon.svg', alt='User Icon')
+        // Login Form
+        form(role='form', action="/loginSubmit", method="post", style='max-width: 300px;')
+          label(for='login') User Name
+          input#login.fadeIn.second(type='text', name='username', placeholder='login')
+
+          label(for='password') Password
+          input#password.fadeIn.third(type='password', name='password', placeholder='password')
+
+          button.fadeIn.fourth(type='submit') Log In
+
+        // Remind Password
+        #formFooter
+          a.underlineHover(href='#') Forgot Password?
