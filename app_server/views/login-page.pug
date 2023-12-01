@@ -11,8 +11,8 @@ block content
         .fadeIn.first
           img#icon(src='http://danielzawadzki.com/codepen/01/icon.svg', alt='User Icon')
         // Login Form
-        form(role='form', action="/login/", method="post", style='max-width: 300px;')
-          label(for='login') Login
+        form(role='form', action="/loginSubmit", method="post", style='max-width: 300px;')
+          label(for='login') User Name
           input#login.fadeIn.second(type='text', name='username', placeholder='login')
 
           label(for='password') Password

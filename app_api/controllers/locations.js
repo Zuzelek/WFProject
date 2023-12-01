@@ -3,7 +3,9 @@ const Song = mongoose.model('Song');
 
 
 
+
 locationsCreate = function (req, res) {
+  console.log("11&&")
   Song.create({
     chart: req.body.chart,
     songName: req.body.songName,
@@ -20,12 +22,26 @@ locationsCreate = function (req, res) {
     });
 };
 const locationsListByDistance = function (req, res) {
-  res
-  .status(200)
-  .json({"status" : "success"});
+  console.log("22&&")
+
+  Song.find().then((songRecords)=>{
+if(songRecords){
+  const songs={
+    songs:songRecords
+  }
+  res.status(200).json(songs);
+
+}
+else{
+  res.status(400).json([]);
+}
+  })
+
  };
 
  const locationsReadOne = function (req, res) {
+  console.log("33&&")
+
    if (req.params && req.params.musicid) {
      Song
        .findById(req.params.musicid)
@@ -48,6 +64,8 @@ const locationsListByDistance = function (req, res) {
            .json(err);
        });
    } else {
+    console.log("44&&")
+
      res
        .status(400)
        .json({
@@ -59,12 +77,16 @@ const locationsListByDistance = function (req, res) {
 
 
 const locationsUpdateOne = function (req, res) {
+  console.log("11&&")
+
   res
 .status(200)
 .json({"status" : "success"});
 };
 
 const locationsDeleteOne = function (req, res) {
+  console.log("11&&")
+
   res
 .status(200)
 .json({"status" : "success"});

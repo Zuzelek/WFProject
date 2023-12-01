@@ -8,11 +8,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const register = function (req, res) {
+  console.log("**** ", )
   res.render('register-page');
 };
 
 const _renderHomepage = function (req, res, responseBody) {
-  console.log(responseBody);
   res.render('musicData', {
     title: 'Music Data - All your music in one place',
     pageHeader: {
@@ -20,14 +20,13 @@ const _renderHomepage = function (req, res, responseBody) {
       strapline: 'Find places to work with wifi near you!'
     },
     sidebar: "Looking for your favourite music? Look no further!.",
-    songs: responseBody
+    songs: responseBody.songs
   });
 };
 
 
 const musicData = function (req, res) {
   const path = '/api/locations';  // Adjust the path based on your API
-
   const requestOptions = {
     url: apiOptions.server + path,
     method: 'GET',
@@ -43,7 +42,7 @@ const musicData = function (req, res) {
     return;
   }
   console.log(response.statusCode);  // Log the response status
-  console.log(body);  // Log the response body
+  console.log("*** data",body);  // Log the response body
   _renderHomepage(req, res, body);
 });
 

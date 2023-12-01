@@ -7,5 +7,11 @@ router.get('/register/', ctrlLocations.register);
 router.get('/musicData/', ctrlLocations.musicData);
 
 /* Other pages */
-router.get('/login', ctrlOthers.login);
+router.get('/login', ctrlOthers.loginPage);
+router.post('/loginSubmit', ctrlOthers.logInData);
+
+
+router.post('/userRegistartion', ctrlOthers.userRegistrationInfo);
+
+
 module.exports = router;
